@@ -1,0 +1,72 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "eslint-plugin-import-helpers"
+    ],
+    "rules": {
+        "react/require-default-props": "off",
+        "function-paren-newline": "off",
+        "react/no-children-prop": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-console": "off",
+        "react/jsx-no-bind": "off",
+        "no-unused-vars": "off",
+        "react/no-array-index-key": "off",
+        "react/jsx-filename-extension": "off",
+        "react/react-in-jsx-scope": "off",
+        "implicit-arrow-linebreak": "off",
+        "operator-linebreak": "off",
+        "object-curly-newline": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        " import/no-unresolved": "off",
+        "import/extensions": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always", // new line between groups
+                "groups": [
+                    "/^react/",
+                    "module",
+                    "/^@shared/",
+                    "/^~/services/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ],
+                    "/^~/"
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    " ignoreCase": true
+                }
+            }
+        ]
+    }
+}
