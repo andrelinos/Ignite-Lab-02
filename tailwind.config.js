@@ -30,5 +30,6 @@ module.exports = {
       },
     },
   },
+  fontFamily: {},
   plugins: [],
 };

@@ -8,6 +8,9 @@
       "~/hooks/*": [
         "src/hooks/*"
       ],
+      "~/lib/*": [
+        "src/lib/*"
+      ],
       "~/context/*": [
         "src/context/*"
       ],
