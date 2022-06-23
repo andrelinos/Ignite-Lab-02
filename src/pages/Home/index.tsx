@@ -61,6 +61,13 @@ export default function Home() {
             icon={<MonitorPlay size={40} weight="thin" />}
             text="Acesse o evento agora mesmo!"
           />
+          <ButtonCard
+            title="Projeto no Github"
+            url="https://www.github.com/andrelinos/Ignite-Lab-02"
+            route="out"
+            icon={<MonitorPlay size={40} weight="thin" />}
+            text="Acesse o projeto no github"
+          />
         </div>
       </div>
     </div>
