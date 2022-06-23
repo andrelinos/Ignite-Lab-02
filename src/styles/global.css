@@ -36,3 +36,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 40px;
   border: 3px solid transparent;
 }
+
+.bg-home {
+  background: rgb(11, 32, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 32, 28, 1) 32%,
+    rgba(13, 13, 14, 1) 100%
+  );
+}

@@ -3,6 +3,8 @@ import { DefaultUi, Player, Youtube } from '@vime/react';
 import { Books, DiscordLogo, Image, Lightning } from 'phosphor-react';
 
 import '@vime/core/themes/default.css';
+import { useEffect, useState } from 'react';
+
 import { Card } from './Card';
 
 import { Button } from '~/components/Button';
@@ -42,16 +44,17 @@ interface VideoProps {
 }
 
 export function Video({ lessonSlug }: VideoProps) {
-  const { data } = useQuery(GET_LESSON_BY_SLUG_QUERY, {
-    variables: { slug: lessonSlug },
-    fetchPolicy: 'no-cache',
-  });
-
-  console.log(data);
+  const { data } = useQuery<GetLessonBySlugQueryResponse>(
+    GET_LESSON_BY_SLUG_QUERY,
+    {
+      variables: { slug: lessonSlug },
+      fetchPolicy: 'no-cache',
+    },
+  );
 
   if (!data) {
     return (
-      <div className="flex-1 ">
+      <div className="flex flex-1 justify-center items-center">
         <h1>Carregando...</h1>
       </div>
     );
