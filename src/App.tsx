@@ -12,7 +12,7 @@ export default function App() {
     <ApolloProvider client={client}>
       <Header />
       <BrowserRouter>
-        <div className=" pt-28">
+        <div className="pt-28">
           <Router />
         </div>
         <Footer />
