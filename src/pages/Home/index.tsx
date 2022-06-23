@@ -18,7 +18,10 @@ export default function Home() {
             <div className="flex flex-1 flex-col text-4xl gap-4 text-brand-gray-100">
               <div>
                 Construa uma
-                <span className="text-brand-blue-500">aplicação completa,</span>
+                <span className="text-brand-blue-500">
+                  {' '}
+                  aplicação completa,
+                </span>
               </div>
               <div>
                 do zero, com
