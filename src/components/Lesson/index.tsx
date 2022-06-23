@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { isPast, format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { CheckCircle, Lock } from 'phosphor-react';
@@ -20,12 +22,25 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
     },
   );
 
+  const url = `/event/lesson/${slug}`;
+
   return (
-    <a href="http#">
+    <Link
+      to={`${isLessonAvailable ? url : '#'}`}
+      className={`${
+        !isLessonAvailable ? 'cursor-not-allowed opacity-60' : 'group'
+      } `}
+    >
       <span className="flex text-brand-gray-300 flex-wrap">
-        {availableDateFormatted}
+        {availableDateFormatted.charAt(0).toUpperCase() +
+          availableDateFormatted.slice(1)}
       </span>
-      <div className="rounded border border-brand-gray-500 p-4 mt-2">
+
+      <div
+        className="relative rounded border border-brand-gray-500 p-4 mt-2  transition-all
+        group-hover:bg-brand-gray-900 group-hover:bg-opacity-40 group-hover:border-brand-green-500
+        group-hover:border-opacity-70"
+      >
         <header className="flex justify-between items-center">
           {isLessonAvailable ? (
             <span
@@ -52,7 +67,11 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
           </span>
         </header>
         <strong className="text-brand-gray-200 mt-5 block">{title}</strong>
+        <span
+          className="absolute hidden top-[calc(50%-8px)] -left-2 w-4 h-4 bg-brand-green-500 rotate-45
+                  rounded-sm"
+        />
       </div>
-    </a>
+    </Link>
   );
 }

@@ -32,9 +32,9 @@ export function SideBar() {
   return (
     <div
       className="w-[21.75rem] bg-brand-gray-700 p-6 border-1 border-brand-gray-600
-          pt-24 flex flex-col"
+         flex flex-col rounded-tl-md"
     >
-      <span className="font-bold text-2xl pb-6 mb-6 border-b border-brand-gray-500 black">
+      <span className="font-bold text-2xl pb-6 mb-6 border-b border-brand-gray-500 block">
         Cronograma de aulas
       </span>
       <div className="flex flex-col gap-8">
