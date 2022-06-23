@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Card } from '~/components/Video/Card';
 
 export default function Home() {
@@ -6,7 +8,9 @@ export default function Home() {
       <div
         className="w-full h-full flex bg-gradient-to-tr
       from-brand-green-700 to-brand-gray-900 bg-opacity-10"
-      />
+      >
+        <Link to="/event">Evento</Link>
+      </div>
     </div>
   );
 }
