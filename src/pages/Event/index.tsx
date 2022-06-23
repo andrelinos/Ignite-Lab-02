@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { SideBar } from '~/components/Sidebar';
@@ -5,6 +6,10 @@ import { Video } from '~/components/Video';
 
 export default function Event() {
   const { slug } = useParams<{ slug: string }>();
+
+  useEffect(() => {
+    console.log('data: => ', slug);
+  }, [slug]);
 
   return (
     <div className="flex min-h-screen">
