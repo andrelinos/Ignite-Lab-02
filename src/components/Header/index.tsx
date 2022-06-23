@@ -6,7 +6,9 @@ export function Header() {
       className="w-full h-24 py-5 flex justify-center items-center bg-brand-gray-700
         border-brand-gray-600 fixed z-10"
     >
-      <Logo />
+      <a href="/">
+        <Logo />
+      </a>
     </header>
   );
 }

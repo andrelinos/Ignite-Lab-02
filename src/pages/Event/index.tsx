@@ -11,7 +11,9 @@ export default function Event() {
       {slug ? (
         <Video lessonSlug={slug} />
       ) : (
-        <div className="flex-1"> Carregando...</div>
+        <div className="flex justify-center items-center flex-1 ">
+          Selecione um vídeo para assistir.
+        </div>
       )}
       <SideBar />
     </div>

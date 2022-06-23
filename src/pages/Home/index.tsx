@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Books, MonitorPlay } from 'phosphor-react';
 
 import { Button } from '~/components/Button';
-import { Card } from '~/components/Video/Card';
+import { ButtonCard } from '~/components/ButtonCard';
 
 export default function Home() {
   return (
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
 
         <div className="w-full grid grid-cols-2 gap-8 mt-20 max-w-7xl mx-auto mb-20">
-          <Card
+          <ButtonCard
             title="Acessar evento"
             url="/event"
             icon={<MonitorPlay size={40} weight="thin" />}

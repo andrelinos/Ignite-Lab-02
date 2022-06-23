@@ -3,7 +3,6 @@ import { DefaultUi, Player, Youtube } from '@vime/react';
 import { Books, DiscordLogo, Image, Lightning } from 'phosphor-react';
 
 import '@vime/core/themes/default.css';
-import { useEffect, useState } from 'react';
 
 import { Card } from './Card';
 
