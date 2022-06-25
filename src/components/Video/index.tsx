@@ -27,9 +27,12 @@ export function Video({ lessonSlug }: VideoProps) {
   }
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 z-0">
       <div className="flex flex-col justify-center bg-black">
-        <div className="w-full h-full max-w-6xl max-h-[calc(60vh+7rem)] aspect-video mx-auto">
+        <div
+          className="flex-1 w-full h-full max-w-6xl max-h-[calc(60vh+7rem)]
+            aspect-video mx-auto"
+        >
           <Player>
             {data.lesson.videoId ? (
               <Youtube
@@ -43,7 +46,7 @@ export function Video({ lessonSlug }: VideoProps) {
           </Player>
         </div>
         <div className="max-w-6xl mx-auto p-8 ">
-          <div className="flex items-start gap-16">
+          <div className="flex flex-col md:flex-row items-start gap-16">
             <div className="flex-1">
               <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
               <p className="mt-4 text-brand-gray-200 leading-relaxed">
@@ -68,7 +71,7 @@ export function Video({ lessonSlug }: VideoProps) {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex w-full md:w-auto flex-col gap-4">
               <Button
                 title="Comunidade do Discord"
                 url="https://discord-service.rocketseat.dev/signin/ignite-lab"
@@ -83,7 +86,10 @@ export function Video({ lessonSlug }: VideoProps) {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 mt-20 max-w-6xl mx-auto">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 max-w-6xl
+            mx-auto px-6"
+        >
           <Card
             url="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5"
             icon={<Books size={40} weight="thin" />}

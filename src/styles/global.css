@@ -37,6 +37,26 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid transparent;
 }
 
+/* Scroll Sidebar */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #81d8f7 transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: #81d8f7;
+  border-radius: 40px;
+  border: 3px solid transparent;
+}
+
 .bg-home {
   background: rgb(11, 32, 28);
   background: linear-gradient(
@@ -44,4 +64,16 @@ body::-webkit-scrollbar-thumb {
     rgba(11, 32, 28, 1) 32%,
     rgba(13, 13, 14, 1) 100%
   );
+}
+
+/* Sidebar */
+.sidebar-show {
+  display: flex !important;
+  position: absolute;
+  bottom: 0;
+}
+
+.scroll {
+  height: 100%;
+  overflow: hidden;
 }

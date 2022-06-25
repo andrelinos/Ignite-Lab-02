@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import Contact from './pages/Contact';
 import Event from './pages/Event';
-import Home from './pages/Home';
 import { Subscribe } from './pages/Subscribe';
 
 export function Router() {

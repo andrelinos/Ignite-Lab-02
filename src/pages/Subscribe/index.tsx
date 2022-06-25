@@ -30,12 +30,15 @@ export function Subscribe() {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+      <div
+        className="w-full lg:max-w-[1100px] flex flex-col lg:flex-row items-center
+        justify-between mt-16 lg:mt-20 mx-auto"
+      >
         <div
-          className="flex max-w-[640px] flex-1 flex-col text-[2.5rem] gap-4 leading-tight
-             text-brand-gray-100"
+          className="flex max-w-[500px] xl:max-w-[640px] flex-1 flex-col text-[2.5rem]
+           gap-4 leading-tight text-brand-gray-100 px-8 xl:px-2"
         >
-          <h1 className="max-w-2xl">
+          <h1 className="lg:max-w-2xl text-center lg:text-left">
             Construa uma
             <strong className="text-brand-blue-500 pl-2">
               aplicação completa
@@ -44,21 +47,24 @@ export function Subscribe() {
             {',  '}
             <strong className="text-brand-blue-500">com React</strong>
           </h1>
-          <p className="max-w-2xl text-lg text-brand-gray-300">
+          <p className="max-w-2xl text-lg text-center lg:text-left text-brand-gray-200">
             Em apenas uma semana você vai dominar na prática uma das tecnologias
             mais utilizadas e com alta demanda para acessar as melhores
             oportunidades do mercado.
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
-          <strong className="text-2xl mb-6 block">
+        <div
+          className="flex w-full lg:w-80 flex-col p-8 mt-10 lg:mt-0 lg:mr-8 xl:mr-0 bg-brand-gray-900
+          lg:bg-gray-700 lg:border lg:border-gray-500 lg:rounded"
+        >
+          <strong className="text-2xl mb-6 text-center lg:block">
             Inscreva-se gratuitamente
           </strong>
 
           <form
             onSubmit={handleSubscribe}
-            className="flex flex-col gap-2 w-full"
+            className="flex flex-col gap-2 w-full pt-4 pb-8 lg:pt-0 lg:pb-0"
           >
             <input
               className="bg-gray-900 rounded px-5 h-14"
@@ -82,10 +88,10 @@ export function Subscribe() {
           </form>
         </div>
       </div>
-      <img src="assets/images/code-mockup.png" className="mt-10" alt="" />
+      <img src="/assets/images/code-mockup.png" className="mt-10" alt="" />
       <div
-        className="w-full max-w-[1440px] grid justify-center grid-cols-auto lg:grid-cols-2 2xl:grid-cols-3 gap-8 mt-20 mx-auto
-            mb-20 p-8"
+        className="w-full max-w-[1440px] grid justify-center grid-cols-1 md:grid-cols-2
+          2xl:grid-cols-3 gap-8 mt-20 mx-auto mb-20 p-8"
       >
         <ButtonCard
           title="Acessar evento"

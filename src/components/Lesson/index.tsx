@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { isPast, format } from 'date-fns';
@@ -39,7 +40,7 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
       </span>
 
       <div
-        className={`relative rounded border border-brand-gray-500 p-4 mt-2  transition-all-
+        className={`flex-1 relative rounded border border-brand-gray-500 p-4 mt-2  transition-all-
          group-hover:border-brand-green-500 ease-in duration-300;
           group-hover:border-opacity-70 ${
             isActiveLesson
