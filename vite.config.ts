@@ -12,6 +12,7 @@ export default defineConfig({
       '~/lib': path.resolve(__dirname, './src/lib'),
       '~/services': path.resolve(__dirname, './src/services'),
       '~/pages': path.resolve(__dirname, './src/pages'),
+      '~/graphql': path.resolve(__dirname, './src/graphql'),
       '~/styles': path.resolve(__dirname, './src/styles'),
     },
   },

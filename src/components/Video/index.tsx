@@ -1,4 +1,3 @@
-import { gql, useQuery } from '@apollo/client';
 import { DefaultUi, Player, Youtube } from '@vime/react';
 import { Books, DiscordLogo, Image, Lightning } from 'phosphor-react';
 
@@ -7,51 +6,19 @@ import '@vime/core/themes/default.css';
 import { Card } from './Card';
 
 import { Button } from '~/components/Button';
-
-const GET_LESSON_BY_SLUG_QUERY = gql`
-  query GetLEssonBySlug($slug: String) {
-    lesson(where: { slug: $slug }) {
-      title
-      videoId
-      description
-      teacher {
-        avatarURL
-        bio
-        name
-      }
-    }
-  }
-`;
-
-interface LessonProps {
-  title: string;
-  videoId: string;
-  description: string;
-  teacher: {
-    bio: string;
-    avatarURL: string;
-    name: string;
-  };
-}
-
-interface GetLessonBySlugQueryResponse {
-  lesson: LessonProps;
-}
+import { useGetLessonBySlugQuery } from '~/graphql/generated';
 
 interface VideoProps {
   lessonSlug: string;
 }
 
 export function Video({ lessonSlug }: VideoProps) {
-  const { data } = useQuery<GetLessonBySlugQueryResponse>(
-    GET_LESSON_BY_SLUG_QUERY,
-    {
-      variables: { slug: lessonSlug },
-      fetchPolicy: 'no-cache',
-    },
-  );
+  const { data } = useGetLessonBySlugQuery({
+    variables: { slug: lessonSlug },
+    fetchPolicy: 'no-cache',
+  });
 
-  if (!data) {
+  if (!data || !data.lesson) {
     return (
       <div className="flex flex-1 justify-center items-center">
         <h1>Carregando...</h1>
@@ -64,7 +31,14 @@ export function Video({ lessonSlug }: VideoProps) {
       <div className="flex flex-col justify-center bg-black">
         <div className="w-full h-full max-w-6xl max-h-[calc(60vh+7rem)] aspect-video mx-auto">
           <Player>
-            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId} />
+            {data.lesson.videoId ? (
+              <Youtube
+                videoId={data.lesson.videoId}
+                key={data.lesson.videoId}
+              />
+            ) : (
+              <Youtube videoId="SO4-izct7Mc" key={1} />
+            )}
             <DefaultUi />
           </Player>
         </div>
@@ -75,22 +49,24 @@ export function Video({ lessonSlug }: VideoProps) {
               <p className="mt-4 text-brand-gray-200 leading-relaxed">
                 {data.lesson.description}
               </p>
-              <div className="flex items-center gap-4 mt-6">
-                <img
-                  className="w-16 h-16 rounded-full border-2 border-brand-blue-500"
-                  src={data.lesson.teacher.avatarURL}
-                  alt={data.lesson.teacher.name}
-                  srcSet=""
-                />
-                <div className="leading-relaxed">
-                  <strong className="text-xl block">
-                    {data.lesson.teacher.name}
-                  </strong>
-                  <span className="text-brand-gray-200 text-sm block">
-                    {data.lesson.teacher.bio}
-                  </span>
+              {data.lesson.teacher && (
+                <div className="flex items-center gap-4 mt-6">
+                  <img
+                    className="w-16 h-16 rounded-full border-2 border-brand-blue-500"
+                    src={data.lesson.teacher.avatarURL}
+                    alt={data.lesson.teacher.name}
+                    srcSet=""
+                  />
+                  <div className="leading-relaxed">
+                    <strong className="text-xl block">
+                      {data.lesson.teacher.name}
+                    </strong>
+                    <span className="text-brand-gray-200 text-sm block">
+                      {data.lesson.teacher.bio}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
             <div className="flex flex-col gap-4">
               <Button

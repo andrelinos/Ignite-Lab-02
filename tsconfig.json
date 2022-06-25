@@ -20,11 +20,14 @@
       "~/config/*": [
         "src/config/*"
       ],
-      "~/styles/*": [
-        "src/styles/*"
+      "~/graphql/*": [
+        "src/graphql/*"
       ],
       "~/services/*": [
         "src/services/*"
+      ],
+      "~/styles/*": [
+        "src/styles/*"
       ]
     },
     "target": "ESNext",

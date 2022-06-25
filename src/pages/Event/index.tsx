@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { DefaultUi, Player, Youtube } from '@vime/react';
+
 import { SideBar } from '~/components/Sidebar';
 import { Video } from '~/components/Video';
 
@@ -16,8 +18,15 @@ export default function Event() {
       {slug ? (
         <Video lessonSlug={slug} />
       ) : (
-        <div className="flex justify-center items-center flex-1 ">
-          Selecione um vídeo para assistir.
+        <div className="flex-1">
+          <div className="flex flex-col justify-center bg-black">
+            <div className="w-full h-full max-w-6xl max-h-[calc(60vh+7rem)] aspect-video mx-auto">
+              <Player>
+                <Youtube videoId="SO4-izct7Mc" key={1} />
+                <DefaultUi />
+              </Player>
+            </div>
+          </div>
         </div>
       )}
       <SideBar />
