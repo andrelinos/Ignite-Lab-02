@@ -75,6 +75,7 @@ export default function Event() {
       </button>
       {menuOpen && (
         <div
+          id="mobile-buttons"
           className="flex h-16 bg-brand-gray-900 fixed bottom-0 right-0 left-0
             px-6 justify-between items-center bg-opacity-80"
         >

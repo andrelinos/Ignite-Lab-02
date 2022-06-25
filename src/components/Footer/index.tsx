@@ -13,7 +13,7 @@ export function Footer() {
       border-brand-gray-600 border-opacity-70 py-16 lg:py-4 px-6"
     >
       <div
-        className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row justify-between
+        className="flex-1 w-full max-w-6xl mx-auto flex flex-col lg:flex-row justify-between
           items-center h-14 gap-2"
       >
         <div
@@ -37,8 +37,8 @@ export function Footer() {
         </a>
       </div>
       <div
-        className="flex max-w-2xl h-16 bg-brand-gray-900  bottom-0 right-0 left-0
-            px-6 justify-between items-center bg-opacity-80 mx-auto py-8 gap-6 mt-10"
+        className="flex-1 flex lg:max-w-2xl lg:h-16 bg-brand-gray-900 px-6 justify-between
+        items-center bg-opacity-80 mx-auto py-8 gap-6 mt-10"
       >
         <button
           type="button"
