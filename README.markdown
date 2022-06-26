@@ -33,13 +33,15 @@
 <hr> -->
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/andrelinos" target="_blank">Author</a>
+  <a href="#-sobre">Sobre</a> &#xa0; | &#xa0;
+  <a href="#telas-da-aplicação">Telas</a> &#xa0; | &#xa0;
+  <a href="#skateboard-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requisitos-para-rodar-a-aplicação">Requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-iniciando">Iniciando</a> &#xa0; | &#xa0;
+  <a href="#-configurações-adicionais-ao-projeto">Schemas</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/andrelinos" target="_blank">Autor</a>
 </p>
 
 <br>
