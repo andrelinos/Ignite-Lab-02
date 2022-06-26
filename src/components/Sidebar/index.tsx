@@ -6,7 +6,7 @@ export function SideBar() {
 
   return (
     <div
-      className="flex w-full min-h-screen lg:min-w-[21.75rem] lg:w-[21.75rem]
+      className="flex w-full lg:min-w-[21.75rem] lg:w-[21.75rem]
       bg-brand-gray-700 p-6 border-1 border-brand-gray-600 flex-col rounded-tl-md
       overflow-y-scroll sidebar-scroll"
     >

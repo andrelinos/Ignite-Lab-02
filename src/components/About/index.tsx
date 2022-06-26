@@ -1,12 +1,8 @@
 import { Button } from '../Button';
 
 export function About() {
-  const [button, html, css, javascript, iframe] = document.querySelectorAll(
-    'button, textarea, iframe',
-  );
-
   return (
-    <div className="flex flex-col gap-4 text-white p-8">
+    <div className="flex w-full flex-col gap-4 text-white p-8">
       <h1 className="text-2xl text-center my-24">
         Para iniciar sua jornada, acesse as aulas no menu aulas.
       </h1>
@@ -22,7 +18,7 @@ export function About() {
       <p />
 
       <div className="flex gap-4 flex-wrap justify-center">
-        <span className="flex w-[20rem] flex-col gap-2">
+        <span className="flex w-full md:w-[20rem] flex-col gap-2">
           <h1 className="text-2xl font-bold">Declarativo</h1>
           <p>
             React faz com que a criação de UIs interativas seja uma tarefa
@@ -35,7 +31,7 @@ export function About() {
             simples de depurar.
           </p>
         </span>
-        <span className="flex w-[20rem] flex-col gap-2">
+        <span className="flex w-full md:w-[20rem] flex-col gap-2">
           <h1 className="text-2xl font-bold">Baseado em componentes</h1>
           <p>
             Crie componentes encapsulados que gerenciam seu próprio estado e
@@ -47,7 +43,7 @@ export function About() {
             longo da sua aplicação e ainda manter o estado fora do DOM.
           </p>
         </span>
-        <span className="flex w-[20rem] flex-col gap-2">
+        <span className="flex w-full md:w-[20rem] flex-col gap-2">
           <h1 className="text-2xl font-bold">
             Aprenda uma vez, use em qualquer lugar
           </h1>
@@ -70,7 +66,7 @@ export function About() {
             </a>
           </p>
         </span>
-        <div className="flex w-[20rem] flex-col gap-2">
+        <div className="flex w-full md:w-[20rem] flex-col gap-2">
           <h1 className="text-2xl font-bold">Vá mais além!</h1>
           <p>
             Você pode criar desde pequenas aplicações a sistemas complexos e de

@@ -59,9 +59,8 @@ export default function Event() {
       )}
       <div
         id="sidebar-div"
-        className={`hidden h-screen lg:flex top-[7rem] right-0
-           overflow-x-hidden sidebar-scroll lg:mr-1 pb-6 z-0
-          bg-brand-gray-700 border-b border-brand-gray-300
+        className={`hidden h-screen lg:flex top-[7rem] right-0 overflow-hidden
+           lg:mr-1 pb-6 z-0 bg-brand-gray-700 border-b border-brand-gray-300
          `}
       >
         <SideBar />
