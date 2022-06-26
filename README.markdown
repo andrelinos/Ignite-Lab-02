@@ -59,7 +59,7 @@ Neste evento vimos como usar tecnologias atuais e poderosas na construção de s
 
 ## Mobile ##
 
-<img src="./.github/home-mobile.png" alt="Imagem da tela da home mobile" /><img src="./.github/home-event-mobile.png" alt="Imagem da tela do evento mobile" /><img src="./.github/sidebar-mobile.png" alt="Imagem da tela do evento mobile" />
+<img src="./.github/home-mobile.png" alt="Imagem da tela da home mobile" /> <img src="./.github/home-event-mobile.png" alt="Imagem da tela do evento mobile" /> <img src="./.github/sidebar-mobile.png" alt="Imagem da tela do evento mobile" />
 
 ## :skateboard: Funcionalidades ##
 
@@ -69,7 +69,7 @@ Neste evento vimos como usar tecnologias atuais e poderosas na construção de s
 
 ## :rocket: Tecnologias ##
 
-The following tools were used in this project:
+Abaixo poderá ter acesso às principais tecnologias usadas neste projeto
 
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -89,19 +89,19 @@ Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) 
 ## :checkered_flag: Iniciando ##
 
 ```bash
-# Clone this project
+# Clone este projeto
 $ git clone https://github.com/andrelinos/Ignite-Lab-02
 
-# Access
+# Acesse
 $ cd Ignite-Lab-02
 
-# Install dependencies
+# Instale as dependências
 $ yarn
 
-# Run the project
+# Execute o projeto
 $ yarn start
 
-# The server will initialize in the <http://localhost:3000>
+# O projeto será inicializado em <http://localhost:3000>
 ```
 
 ## 📡 Configurações adicionais ao projeto ##
@@ -121,9 +121,9 @@ O link abaixo, tem o schema que você pode clonar e usar como base para entender
 
 ## :memo: Licença ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+Este projeto está sob licença MIT. Para mais informações acesse [LICENSE](LICENSE.md).
 
-Made with :heart: by <a href="https://github.com/andrelinos" target="_blank">Andrelino Silva</a>
+Feito com :heart: por <a href="https://github.com/andrelinos" target="_blank">Andrelino Silva</a>
 
 &#xa0;
 
