@@ -55,8 +55,8 @@ export function Subscribe() {
         </div>
 
         <div
-          className="flex w-full lg:w-80 flex-col p-8 mt-10 lg:mt-0 lg:mr-8 xl:mr-0 bg-brand-gray-900
-          lg:bg-gray-700 lg:border lg:border-gray-500 lg:rounded"
+          className="flex w-full lg:w-80 flex-col p-8 mt-10 lg:mt-0 lg:mr-8 xl:mr-0
+          bg-brand-gray-900 lg:bg-gray-700 lg:border lg:border-gray-500 lg:rounded"
         >
           <strong className="text-2xl mb-6 text-center lg:block">
             Inscreva-se gratuitamente
@@ -107,7 +107,7 @@ export function Subscribe() {
           text="Acesse o projeto no github"
         />
         <ButtonCard
-          title="Site do auto"
+          title="Site do autor"
           url="https://andrelino.dev"
           route="out"
           icon={<Planet size={32} weight="thin" />}

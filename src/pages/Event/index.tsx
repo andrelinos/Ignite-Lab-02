@@ -12,6 +12,7 @@ import {
   X,
 } from 'phosphor-react';
 
+import { About } from '~/components/About';
 import { SideBar } from '~/components/Sidebar';
 import { Video } from '~/components/Video';
 
@@ -40,39 +41,45 @@ export default function Event() {
         <Video lessonSlug={slug} />
       ) : (
         <div className="flex-1">
-          <div className="flex flex-col justify-center bg-black">
-            <div className="w-full h-full max-w-6xl max-h-[calc(60vh+7rem)] aspect-video mx-auto">
+          {/* <div className="flex flex-col justify-center bg-black">
+            <div
+              className="w-full h-full max-w-6xl max-h-[calc(60vh+7rem)] aspect-video
+                mx-auto z-0"
+            >
               <Player>
                 <Youtube videoId="SO4-izct7Mc" key={1} />
                 <DefaultUi />
               </Player>
             </div>
+          </div> */}
+          <div className="bg-blur bg-no-repeat bg-cover">
+            <About />
           </div>
         </div>
       )}
       <div
         id="sidebar-div"
         className={`hidden h-screen lg:flex top-[7rem] right-0
-          overflow-y-scroll overflow-x-hidden sidebar-scroll lg:mr-1 pb-6 z-0
+           overflow-x-hidden sidebar-scroll lg:mr-1 pb-6 z-0
           bg-brand-gray-700 border-b border-brand-gray-300
          `}
       >
         <SideBar />
       </div>
-      <button
-        type="button"
-        className={`w-10 h-10 flex justify-center items-center fixed top-[calc(1.5rem)]
-            right-4 border rounded z-40 lg:hidden
-            ${
-              !menuOpen
-                ? `border-brand-green-500  opacity-70 hover:opacity-100
-                   text-brand-green-500`
-                : ''
-            }`}
-        onClick={() => setMenuOpen(!menuOpen)}
+      <div
+        className={`fixed flex items-center top-[1rem] right-4 z-40
+        lg:hidden gap-1`}
       >
-        {!menuOpen ? <List size={32} /> : <X size={32} />}
-      </button>
+        {!menuOpen && <span className="text-sm">Aulas</span>}
+        <button
+          type="button"
+          className={`w-10 h-10 flex justify-center items-center
+          ${!menuOpen ? 'text-brand-blue-500' : 'text-brand-gray-100'}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {!menuOpen ? <List size={40} /> : <X size={40} />}
+        </button>
+      </div>
       {menuOpen && (
         <div
           id="mobile-buttons"
