@@ -59,9 +59,7 @@ Neste evento vimos como usar tecnologias atuais e poderosas na construção de s
 
 ## Mobile ##
 
-<img src="./.github/home-mobile.png" alt="Imagem da tela da home mobile" />
-<img src="./.github/home-event-mobile.png" alt="Imagem da tela do evento mobile" />
-<img src="./.github/sidebar-mobile.png" alt="Imagem da tela do evento mobile" />
+<img src="./.github/home-mobile.png" alt="Imagem da tela da home mobile" /><img src="./.github/home-event-mobile.png" alt="Imagem da tela do evento mobile" /><img src="./.github/sidebar-mobile.png" alt="Imagem da tela do evento mobile" />
 
 ## :skateboard: Funcionalidades ##
 
