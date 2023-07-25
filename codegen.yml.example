@@ -1,3 +1,4 @@
+# schema is the NEXT_GRAPHCMS_API_CONTENT
 schema: http://my-graphql-api.com/graphql
 documents: './src/graphql/**/*.graphql'
 generates:
